@@ -1,0 +1,61 @@
+p-card {
+  ::ng-deep {
+
+    // card style
+    .p-component {
+      background-color: #eee;
+      width: 320px;
+      border-radius: 8px;
+    }
+
+    // image container
+    .p-card-header {
+      width: 320px;
+      height: 200px;
+    }
+
+    // image dimensions
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    // card title (header)
+    .p-card-title {
+      max-width: 87%;
+      max-height: 40px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    // heart icon
+    i {
+      position: absolute;
+      top: 19px;
+      right: 10px;
+      font-size: larger;
+      cursor: pointer;
+    }
+
+    // remove padding from card content
+    .p-card-content {
+      padding: 0px;
+
+    }
+
+    // card body dimensions
+    .p-card-body {
+      padding: 10px;
+      height: 200px;
+      position: relative;
+    }
+
+    // description
+    .description {
+      max-width: 100%;
+      max-height: 126px;
+      overflow: auto;
+    }
+  }
+}
