@@ -1,0 +1,7 @@
+::ng-deep .p-menubar-button {
+  order: 1;
+
+}
+::ng-deep p-menubarsub {
+  order: 2;
+}
