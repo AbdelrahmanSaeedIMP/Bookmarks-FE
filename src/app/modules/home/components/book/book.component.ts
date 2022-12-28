@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-book',
@@ -7,16 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookComponent{
 
-  isFavourite = false;
-  heartClass = 'pi pi-heart';
+  @Input('bookData') bookData = {
+    bookID: '1',
+    bookName: 'book name',
+    bookDisc: 'Lorem ipsum dolor sit amet. Inventore sed consequuntur error repudiandae',
+    bookImage: '../../../../../assets/images/book.jpg',
+    bookmarked: false,
+  }
   toggleHeart() {
-    this.isFavourite = !this.isFavourite;
-    if (this.isFavourite === true) {
-      this.heartClass = 'pi pi-heart-fill';
-    }
-    else {
-      this.heartClass = 'pi pi-heart';
-    }
+    this.bookData.bookmarked = !this.bookData.bookmarked;
   }
 
 }
