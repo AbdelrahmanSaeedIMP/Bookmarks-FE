@@ -3,5 +3,5 @@
       <img alt="Card" src="{{bookData.bookImage}}">
   </ng-template>
   <i [class]="bookData.bookmarked ? 'pi pi-heart-fill': 'pi pi-heart'" (click)="toggleHeart()"></i>
-  <div class="description">{{bookData.bookDisc}}</div>
+  <div class="description">{{bookData.bookDesc}}</div>
 </p-card>

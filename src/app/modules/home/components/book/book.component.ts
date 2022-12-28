@@ -10,7 +10,7 @@ export class BookComponent{
   @Input('bookData') bookData = {
     bookID: '1',
     bookName: 'book name',
-    bookDisc: 'Lorem ipsum dolor sit amet. Inventore sed consequuntur error repudiandae',
+    bookDesc: 'Lorem ipsum dolor sit amet. Inventore sed consequuntur error repudiandae',
     bookImage: '../../../../../assets/images/book.jpg',
     bookmarked: false,
   }
