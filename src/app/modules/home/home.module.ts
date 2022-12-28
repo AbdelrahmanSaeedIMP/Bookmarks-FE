@@ -6,7 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { BookComponent } from './components/book/book.component';
 import {CardModule} from 'primeng/card';
 import { BookService } from 'src/app/core/services/book.service';
-
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { BookService } from 'src/app/core/services/book.service';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    CardModule
+    CardModule,
+    SharedModule
   ],
   providers: [
     BookService
