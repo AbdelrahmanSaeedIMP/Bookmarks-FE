@@ -5,6 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { BookComponent } from './components/book/book.component';
 import {CardModule} from 'primeng/card';
+import { BookService } from 'src/app/core/services/book.service';
 
 
 @NgModule({
@@ -16,6 +17,9 @@ import {CardModule} from 'primeng/card';
     CommonModule,
     HomeRoutingModule,
     CardModule
+  ],
+  providers: [
+    BookService
   ]
 })
 export class HomeModule { }
