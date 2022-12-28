@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { bookResponse } from 'src/app/shared/models/book.model';
 
 @Component({
   selector: 'app-book',
@@ -7,15 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BookComponent{
 
-  @Input('bookData') bookData = {
-    bookID: '1',
-    bookName: 'book name',
-    bookDesc: 'Lorem ipsum dolor sit amet. Inventore sed consequuntur error repudiandae',
-    bookImage: '../../../../../assets/images/book.jpg',
-    bookmarked: false,
-  }
+  @Input('bookData') bookData!: bookResponse;
+  bookmarked = true
   toggleHeart() {
-    this.bookData.bookmarked = !this.bookData.bookmarked;
+    this.bookmarked = !this.bookmarked;
   }
 
 }
