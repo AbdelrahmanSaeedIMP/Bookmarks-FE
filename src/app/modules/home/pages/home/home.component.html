@@ -1,4 +1,8 @@
 <h1 class="">All Books</h1>
-<div class="grid py-2">
-  <app-book class="col-12 lg:col-4 md:col-5" *ngFor="let book of books" [bookData]="book"></app-book>
-</div>
+<section *ngIf="!booksIsLoading && books">
+  <div class="grid py-2">
+    <app-book class="col-12 lg:col-4 md:col-5" *ngFor="let book of books" [bookData]="book"></app-book>
+  </div>
+</section>
+<app-loading *ngIf="booksIsLoading"></app-loading>
+

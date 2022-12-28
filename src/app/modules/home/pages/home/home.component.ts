@@ -9,6 +9,7 @@ import { bookResponse } from 'src/app/shared/models/book.model';
 })
 export class HomeComponent {
 
+  booksIsLoading: boolean = true;
   books!: bookResponse[];
   constructor(private bookService: BookService) {
 
@@ -20,9 +21,11 @@ export class HomeComponent {
     this.bookService.getBooks(2).subscribe({
       next: (response: bookResponse[]) => {
         this.books = response;
+        this.booksIsLoading = false;
       },
       error: (err: Error) => {
         console.log(err);
+        this.booksIsLoading = false;
       }
     })
   }
