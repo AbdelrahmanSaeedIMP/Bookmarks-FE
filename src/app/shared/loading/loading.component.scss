@@ -1,0 +1,11 @@
+div {
+  height: 580px;
+}
+
+@media (max-width: 576px) {
+  ::ng-deep {
+    .p-progress-spinner-svg {
+      width: 60% !important
+    }
+  }
+}
