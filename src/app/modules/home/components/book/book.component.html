@@ -1,7 +1,10 @@
-<p-card header="{{bookData.name}}">
-  <ng-template pTemplate="header">
-      <img alt="Card" src="{{bookData.imgUrl}}">
-  </ng-template>
-  <i [class]="bookmarked ? 'pi pi-heart-fill': 'pi pi-heart'" (click)="toggleHeart()"></i>
-  <div class="description">{{bookData.description}}</div>
-</p-card>
+<div class="w-12 md:w-11">
+  <p-card header="{{bookData.name}}">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="{{bookData.imgUrl}}">
+    </ng-template>
+    <i [class]="bookmarked ? 'pi pi-heart-fill': 'pi pi-heart'" (click)="toggleHeart()"></i>
+    <div class="description">{{bookData.description}}</div>
+  </p-card>
+
+</div>
