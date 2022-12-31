@@ -18,7 +18,7 @@ export class HomeComponent {
     this.getBooks();
   }
   getBooks() {
-    this.bookService.getBooks(2).subscribe({
+    this.bookService.getBooks(1).subscribe({
       next: (response: bookResponse[]) => {
         this.books = response;
         this.booksIsLoading = false;

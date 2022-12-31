@@ -9,9 +9,8 @@ import { bookResponse } from 'src/app/shared/models/book.model';
 export class BookComponent{
 
   @Input('bookData') bookData!: bookResponse;
-  bookmarked = true
   toggleHeart() {
-    this.bookmarked = !this.bookmarked;
+    this.bookData.bookmarked = !this.bookData.bookmarked;
   }
 
 }
