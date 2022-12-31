@@ -3,4 +3,5 @@ export interface bookResponse {
   name: string,
   description: string,
   imgUrl: string,
+  bookmarked: boolean,
 }
